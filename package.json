@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "Nú er eigandi _Bókabúðarinnar_ kátur með útlitið en hefur áhyggjur af viðhaldi á vefnum.",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "concurrently": "^5.3.0",
-    "node-sass": "^4.14.1"},
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
   "scripts": {
     "browser-sync": "browser-sync start --server --files \"*\"",
     "sass": "node-sass --source-map-embed styles.scss styles.css",
     "sass-watch": "node-sass --source-map-embed styles.scss styles.css -w",
-    "dev": "concurrently npm:sass-watch npm:browser-sync"
+    "dev": "concurrently npm:sass-watch npm:browser-sync",
+    "lint": "stylelint ./**/*.scss"
   },
   "repository": {
     "type": "git",
